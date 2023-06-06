@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h2 align="center">Chemical Reaction Outcome Prediction (Thesis)</h2>
+<h2 align="center">Chemical Reaction Outcome Prediction</h2>
 
   <p align="center">
     Natural Language based Approach (Seq-to-Seq)
@@ -45,7 +45,7 @@
 
 ## About The Project
 
-This is a DL based approach for reaction outcome prediction as part of my IITM MTech thesis. The problem is posed as sequence to sequence problem, where the input sequence is the string representation of the
+This is a DL based approach for predicting chemical reaction outcome as part of my IITM MTech thesis. The problem is posed as sequence to sequence problem, where the input sequence is the string representation of the
 LHS and the target sequence is the string representation of RHS. The T5 model, which is a Transformer based encoder-decoder type model, is used for the task. The implementation is derived from the official implementation of the paper title - ["Unified Deep Learning Model for Multitask Reaction Predictions with Explanation" by [Lu and Zhang (2022)]](https://github.com/HelloJocelynLu/t5chem).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -81,13 +81,13 @@ The instructions that follow are confirmed to be working on an Ubuntu system.
 
 ### Preparing the dataset for training
 
-1. MIT-USPTO dataset available online is used in the analysis. The dataset is aavilable in the data/ folder of this repo. 
+1. MIT-USPTO dataset available online is used in the analysis. The dataset is available in the data/ folder of this repo. 
 
 ### Training the model:
 
 1. Place the data in data/ folder 
 
-2.  From the root directory, run
+2.  From the root directory, run the following to fine-tune the pretrained model. Remove the --pretrain arguement to train the model from scratch.
     ```sh
     python run_trainer.py --data_dir <data_dir> --output_dir <output_dir> --pretrain <model_path> --tokenizer <vocab_path>
     ```
@@ -117,7 +117,7 @@ The instructions that follow are confirmed to be working on an Ubuntu system.
     |
     ├── scripts                      
     |   ├── vocab
-    |   |      ├── atom           <- Atom level (WordPiece tokenization algorithm to SMILES strings using RegEx)
+    |   |      ├── atom           <- Atom level (Apply WordPiece tokenization algorithm to SMILES strings using RegEx)
     |   |      ├── simple         <- Character level tokenizer
     |   |      ├── selfies        <- Self-Referencing Embedded Strings
     |   |      ├── ours           <- Pre-trained BPE tokenizer
