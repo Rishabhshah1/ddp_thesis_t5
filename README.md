@@ -133,12 +133,6 @@ The instructions that follow are confirmed to be working on an Ubuntu system.
     ├── out.py                    <- Python file for testing with custom input
 --------
 
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
